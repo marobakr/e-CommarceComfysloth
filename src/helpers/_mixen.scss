@@ -1,0 +1,47 @@
+@mixin main-padding {
+  position: relative;
+  padding: {
+    bottom: $min-card-padding;
+    top: $min-card-padding;
+  }
+}
+@mixin BtnStyle {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  color: $clr-prime3;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: $clr-prime2;
+  letter-spacing: $--spacing;
+  transition: $main-transition;
+  box-shadow: 0 1px 3px #00000033;
+  &:hover {
+    background-color: $clr-prime4;
+    color: $clr-prime5;
+  }
+}
+@mixin main_title {
+  position: relative;
+  color: $clr-prime1;
+  font-size: 3rem;
+  &::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 8rem;
+    height: 0.25rem;
+    background-color: $clr-prime2;
+    transition: $main-transition;
+  }
+}
+@mixin aline_center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,60 @@
+.cartpadge {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+  }
+  @include main-padding;
+  .container {
+    .our_items {
+      display: grid;
+      text-align: center;
+      grid-template-columns: 316px 1fr 1fr 1fr auto;
+      justify-content: center;
+      column-gap: 1rem;
+      h5 {
+        margin: 0;
+        letter-spacing: $--spacing;
+        line-height: $--line;
+        margin-bottom: 0.75rem;
+      }
+    }
+    hr {
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+    .body_title {
+      display: block;
+
+      .our_order {
+        display: grid;
+        grid-template-columns: 316px 1fr 1fr 1fr auto;
+        justify-content: center;
+        gap: 3rem 1rem;
+        place-items: center;
+        margin-bottom: 3rem;
+        .count {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          place-items: center;
+          button {
+            width: 2rem;
+            height: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border-color: transparent;
+            cursor: pointer;
+          }
+          h2 {
+            color: $clr-prime1;
+          }
+        }
+      }
+    }
+  }
+}

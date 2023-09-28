@@ -1,0 +1,51 @@
+.landing_padge {
+  @include main-padding;
+  .container {
+    @extend %container-drid-display;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    .right_section {
+      h1 {
+        font-size: 3rem;
+        color: $clr-prime1;
+        @media (min-width: 1200px) {
+          width: 80%;
+        }
+      }
+      p {
+        color: $pragrph_color;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+      }
+      button {
+        @include BtnStyle;
+      }
+    }
+    .left_section {
+      @media (max-width: 991px) {
+        display: none;
+      }
+      position: relative;
+      width: 80%;
+      &::before {
+        position: absolute;
+        content: '';
+        left: -37px;
+        width: 10%;
+        height: 80%;
+        background-color: #decbc0;
+        z-index: -1;
+        top: 100px;
+      }
+      img {
+        z-index: 1;
+        max-width: 100%;
+      }
+      .alt_img {
+        position: absolute;
+        width: 56%;
+        left: -110px;
+        bottom: 0;
+      }
+    }
+  }
+}

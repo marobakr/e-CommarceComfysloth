@@ -1,0 +1,22 @@
+.pagehero {
+  padding: 0.5rem;
+  background-color: $clr-prime3;
+  .container {
+    h3 {
+      @media (max-width: 800px) {
+        font-size: 1.5rem;
+      }
+      font-size: 2rem;
+      color: $clr-prime5;
+      line-height: $--line;
+      letter-spacing: $--spacing;
+      a {
+        transition: $main-transition;
+        color: $clr-prime8;
+        &:hover {
+          color: $clr-prime5;
+        }
+      }
+    }
+  }
+}

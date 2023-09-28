@@ -1,0 +1,84 @@
+.featured_product {
+  @include main-padding;
+  background-color: $clr-prime7;
+  .main-title {
+    text-align: center;
+    padding: 15px 0;
+    h1 {
+      @include main_title;
+      letter-spacing: $--spacing;
+    }
+  }
+  .container {
+    @extend %container-drid-display;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+
+    padding-bottom: 2rem;
+    .card {
+      .img {
+        position: relative;
+        background: #222;
+        border-radius: $--radius;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        img {
+          width: 355px !important;
+          height: 255px !important;
+          display: block;
+          object-fit: cover;
+          transition: $main-transition;
+          @media (min-width: 686px) {
+            height: 250px;
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+        .icnos {
+          @include aline_center;
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          color: white;
+          transition: $main-transition;
+          visibility: hidden;
+          opacity: 0;
+          &::before {
+            @include aline_center;
+            content: '';
+            position: absolute;
+            background-color: $clr-prime2;
+            padding: 25px;
+            border-radius: 50%;
+            z-index: -1;
+          }
+        }
+        &:hover {
+          .icnos {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        .title {
+          color: $clr-prime1;
+          letter-spacing: $--spacing;
+        }
+        .price {
+          color: $clr-prime2;
+        }
+      }
+    }
+  }
+  button {
+    @include BtnStyle;
+    display: block;
+    margin: 2rem auto;
+    padding: 0.5rem 1.5rem;
+  }
+}
