@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NODE_ENV=development next dev",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,9 +14,14 @@
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
     "aos": "^3.0.0-beta.6",
-    "next": "13.5.2",
+    "next": "latest",
+    "node-fetch": "^3.3.2",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.7.1",
+    "typescript": "5.2.2"
   }
 }
