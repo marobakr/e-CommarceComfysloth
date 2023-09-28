@@ -258,4 +258,4 @@ export const ProductsData = [
     category: 'kitchen',
     shipping: true,
   },
-]
+];

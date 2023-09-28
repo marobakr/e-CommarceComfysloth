@@ -5,9 +5,9 @@ import { useContext } from 'react'
 const filters = () => {
   const { category, setCategory, categoryies, handleClick } =
     useContext(ProductsContext)
-  const click = (property) => {
-    setCategory(property)
-  }
+  // const click = (property) => {
+  //   setCategory(property)
+  // }
   return (
     <div className='left_card_category'>
       <input
